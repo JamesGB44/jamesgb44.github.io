@@ -1,0 +1,16 @@
+
+header{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height:100px;
+	width:100%;
+	background:#000000;
+}
+.logo{
+	padding-left: 125px;
+	padding-top: 10px;
+	height:80px;
+	width:315px;
+
+}
