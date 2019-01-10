@@ -1,56 +1,94 @@
-window.onload = function() {
- init();
+
+var slideIndex,slides,dots,captionText;
+function initGallery(){
+    slideIndex = 0;
+    slides=document.getElementsByClassName("imageHolder");
+    slides[slideIndex].style.opacity=1;
+
+	
+    captionText=document.querySelector(".captionTextHolder .captionText");
+    captionText.innerText=slides[slideIndex].querySelector(".captionText").innerText;
+
+    //disable nextPrevBtn if slide count is one
+    if(slides.length<2){
+        var nextPrevBtns=document.querySelector(".leftArrow,.rightArrow");
+        nextPrevBtns.style.display="none";
+        for (i = 0; i < nextPrevBtn.length; i++) {
+            nextPrevBtn[i].style.display="none";
+        }
+    }
+
+    //add dots
+    dots=[];
+    var dotsContainer=document.getElementById("dotsContainer"),i;
+    for (i = 0; i < slides.length; i++) {
+        var dot=document.createElement("span");
+        dot.classList.add("dots");
+        dotsContainer.append(dot);
+        dot.setAttribute("onclick","moveSlide("+i+")");
+        dots.push(dot);
+    }
+    dots[slideIndex].classList.add("active");
 }
-var canvas = document.getElementById("canvas"); 
-var my_context = canvas.getContext('2d'); 
-var random_colour, width = 20, height = 20, x = 0, y = 0;
+initGallery();
+function plusSlides(n) {
+    moveSlide(slideIndex+n);
+}
+function moveSlide(n){
+    var i;
+    var current,next;
+    var moveSlideAnimClass={
+          forCurrent:"",
+          forNext:""
+    };
+    var slideTextAnimClass;
+    if(n>slideIndex) {
+        if(n >= slides.length){n=0;}
+        moveSlideAnimClass.forCurrent="moveLeftCurrentSlide";
+        moveSlideAnimClass.forNext="moveLeftNextSlide";
+        slideTextAnimClass="slideTextFromTop";
+    }else if(n<slideIndex){
+        if(n<0){n=slides.length-1;}
+        moveSlideAnimClass.forCurrent="moveRightCurrentSlide";
+        moveSlideAnimClass.forNext="moveRightPrevSlide";
+        slideTextAnimClass="slideTextFromBottom";
+    }
 
-function init(){
-	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
-	/*
-	my_context.beginPath();
-	my_context.rect(0,0,canvas.width,canvas.height);
-	my_context.fillStyle = "black";
-	my_context.fill();
-	
-	my_context.beginPath();
-	my_context.rect((canvas.width/2) - 25,canvas.height/2 - 25,50,50);
-	my_context.fillStyle = "red";
-	my_context.fill();
-	
-	my_context.beginPath();
-	my_context.arc(canvas.width/2,canvas.height/2, 20, 0, 2 * Math.PI);
-	my_context.fillStyle = "blue";
-	my_context.fill();
-	
-	my_context.moveTo(canvas.width/2, 0)
-	my_context.lineTo(canvas.width/2, canvas.height)
-	my_context.strokeStyle = "orange";
-	my_context.stroke();
-	
-	my_context.moveTo(0, canvas.height/2)
-	my_context.lineTo(canvas.width, canvas.height/2)
-	my_context.strokeStyle = "orange";
-	my_context.stroke();
-	*/
-	while (true){
-		
-		while (x*10 < canvas.width)
-		{
-			while (y*10 < canvas.height)
-			{
-				console.log(x, y)
-				random_colour = '#'+Math.floor(Math.random()*16777215).toString(16);
-				my_context.fillStyle = random_colour;
-				my_context.fillRect(x*20,y*20, width, height)
-				y++;
-			}
-			x++;
-			y = 0;
-		}
-	}
-
-
+    if(n!=slideIndex){
+        next = slides[n];
+        current=slides[slideIndex];
+        for (i = 0; i < slides.length; i++) {
+            slides[i].className = "imageHolder";
+            slides[i].style.opacity=0;
+            dots[i].classList.remove("active");
+        }
+        current.classList.add(moveSlideAnimClass.forCurrent);
+        next.classList.add(moveSlideAnimClass.forNext);
+        dots[n].classList.add("active");
+        slideIndex=n;
+        captionText.style.display="none";
+        captionText.className="captionText "+slideTextAnimClass;
+        captionText.innerText=slides[n].querySelector(".captionText").innerText;
+        captionText.style.display="block";
+    }
 
 }
+var timer=null;
+function setTimer(){
+    timer=setInterval(function () {
+        plusSlides(1) ;
+    },5000);
+}
+setTimer();
+function playPauseSlides() {
+    var playPauseBtn=document.getElementById("playPause");
+    if(timer==null){
+        setTimer();
+        playPauseBtn.style.backgroundPositionY="0px"
+    }else{
+        clearInterval(timer);
+        timer=null;
+        playPauseBtn.style.backgroundPositionY="-33px"
+    }
+}
+

@@ -1,16 +1,667 @@
-
-header{
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	height:100px;
-	width:100%;
-	background:#000000;
+body {
+	background-color: #A1A1A1;
 }
+
+#text-center{
+	font-size: 44px;
+	color: blue;
+	text-align: top;
+	padding: 200px;
+}
+
+#text-center img{
+	padding-left: 30%;
+}
+
+@font-face {
+    font-family: 'Merc-Standard';
+    src: url(Corporate A BQ Regular.ttf);
+}
+
 .logo{
 	padding-left: 125px;
 	padding-top: 10px;
-	height:80px;
-	width:315px;
+	width: 315px;
+	height: 80px;
+}
+
+.nav-container {
+  width: 100%;
+  height: 100px;
+}
+
+.nav-bar {
+  background-color: #000000;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.nav-bar ul {
+  margin: 10px;
+  padding-right:50px;
+  text-align: right;
+  display:inline-block;
+  vertical-align:top;
+  float:right;
+}
+
+.nav-bar li {
+  list-style-type: none;
+  padding: 0px;
+  height: 24px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: inline-block;
+  float:right;
+}
+
+.nav-bar li a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  line-height: 70px;
+  padding: 5px 15px;
+}
+
+.nav-bar li a:hover {
+  background-color: #A1A1A1;
+}
+
+.side-bar-left {
+  background-color: #000000;
+  width: 125px;
+  height: 100%;
+  top: 100px;
+  left: 0px;
+  position: absolute;
+}
+
+.side-bar-right {
+  background-color: #000000;
+  width: 100px;
+  height: 100%;
+  top: 100px;
+  right: 0px;
+  position: absolute;
+  float: right;
+}
+
+.classButtonContainerLeft li:hover {
+  -webkit-filter: invert(100%) !important;
+}
+
+.classButtonContainerLeft {
+  width: 275px;
+  height: 100%;
+  position: absolute;
+  left: 125px;
+  transform: translateY(-80%);
+}
+
+.classButtonContainerLeft ul {
+  margin: 10px;
+  padding-right: 25px;
+  padding-top: 100px;
+  text-align: right;
+  display:inline-block;
+  vertical-align:top;
+  float:right; 
+}
+
+.classButtonContainerLeft li {
+  list-style-type: none;
+  margin-bottom: 100px;
+  height: 100px;
+  width: 200px;
+  display: flex;
+  float:right;
+  background-color: black;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-size: 44px;
+  font-family: Merc-Standard;
+}
+
+.classButtonContainerRight li:hover {
+  -webkit-filter: invert(100%) !important;
+}
+
+.classButtonContainerRight {
+  width: 275px;
+  height: 100%;
+  position: absolute;
+  right: 125px;
+  transform: translateY(-80%);
+}
+
+.classButtonContainerRight ul {
+  margin: 10px;
+  padding-right: 25px;
+  padding-top: 100px;
+  text-align: right;
+  display:inline-block;
+  vertical-align:top;
+  float:right; 
+}
+
+.classButtonContainerRight li {
+  list-style-type: none;
+  margin-bottom: 100px;
+  height: 100px;
+  width: 200px;
+  display: flex;
+  float:right;
+  background-color: black;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-size: 44px;
+  font-family: Merc-Standard;
+}
+
+.extraButtonContainer {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  transform: translateY(250%);
+}
+
+.extraButtonContainer li:hover {
+  -webkit-filter: invert(100%) !important;
+}
+
+.extraButtonContainer ul {
+  margin: 10px;
+  padding-right:310px;
+  text-align: right;
+  display:inline-block;
+  vertical-align:top;
+  float:right;
+  
+}
+
+.extraButtonContainer li {
+  list-style-type: none;
+  margin-right: 50px;
+  height: 150px;
+  width: 350px;
+  display: flex;
+  float:right;
+  background-color: black;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-size: 44px;
+  font-family: Merc-Standard;
+}
+
+.footer-bar {
+  background-color: #000000;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+}
+
+.footer-container {
+  width: 100%;
+  height: 100px;
+}
+
+.footer-bar ul {
+  margin: 10px;
+  padding-right:150px;
+  text-align: right;
+  display:inline-block;
+  vertical-align:top;
+  float:right;
+}
+
+.footer-bar li {
+  list-style-type: none;
+  padding: 0px;
+  height: 24px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: inline-block;
+  float:right;
+}
+
+.footer-bar li a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  line-height: 70px;
+  padding: 5px 30px;
+}
+
+
+.social-media {
+	background-color: #000000;
+	width: 75px;
+	height: 75px;
+}
+
+.footer-bar li a:hover {
+  -webkit-filter: invert(100%) !important;
+}
+
+html,body{
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+
+.galleryContainer{
+    width: 100%;
+    height: 900px;
+    max-width: 1100px;
+    margin: auto;
+    user-select: none;
+    box-shadow: 0px 0px 3px 1px #00000078;
+	transform: translateY(10%);
+}
+.galleryContainer .slideShowContainer{
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    background-color: gainsboro;
+    position: relative;
+}
+.galleryContainer .slideShowContainer #playPause{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    background-image: url(playPause.png);
+    background-repeat: no-repeat;
+    z-index: 5;
+    background-size: cover;
+    margin: 5px;
+    cursor: pointer;
+}
+.galleryContainer .slideShowContainer #playPause:hover{
+    opacity: .7;
+}
+.galleryContainer .slideShowContainer .imageHolder{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+.galleryContainer .slideShowContainer .imageHolder img{
+    width: 100%;
+    height: 100%;
+}
+.galleryContainer .slideShowContainer .imageHolder .captionText{
+    display: none;
+}
+
+.galleryContainer .slideShowContainer .leftArrow,.galleryContainer .slideShowContainer .rightArrow{
+    width: 50px;
+    background: #00000036;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transition: background 0.5s;
+    height: 72px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.galleryContainer .slideShowContainer .rightArrow{
+    left: auto;
+    right: 0;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.galleryContainer .slideShowContainer .leftArrow:hover,.galleryContainer .slideShowContainer .rightArrow:hover{
+    background: #000000a8;
+    cursor: pointer;
+}
+.galleryContainer .arrow{
+    display: inline-block;
+    border: 3px solid white;
+    width: 10px;
+    height: 10px;
+    border-left: none;
+    border-bottom: none;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.galleryContainer .arrow.arrowLeft{
+    transform: rotateZ(-135deg);
+}
+.galleryContainer .arrow.arrowRight{
+    transform: rotateZ(45deg);
+}
+
+
+.galleryContainer .slideShowContainer>.captionTextHolder{
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    color: Black;
+    font-family: sans-serif;
+    font-size: 44px;
+    text-align: center;
+    width: 100%;
+    background: #00000047;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+}
+.galleryContainer .slideShowContainer>.captionTextHolder>.captionText{
+    margin: 0;
+}
+
+.galleryContainer #dotsContainer{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.galleryContainer #dotsContainer .dots{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 5px;
+    background-color: #bbb;
+    cursor: pointer;
+    transition:background-color 0.5s;
+}
+.galleryContainer #dotsContainer .dots:first-child{
+    margin-left: 0;
+}
+.galleryContainer #dotsContainer .dots:hover,.galleryContainer #dotsContainer .dots.active{
+    background-color: #000000;;
+}
+
+
+
+
+.galleryContainer .moveLeftCurrentSlide{
+    animation-name: moveLeftCurrent;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
 
 }
+.galleryContainer .moveLeftNextSlide{
+    animation-name: moveLeftNext;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+@keyframes moveLeftCurrent {
+    from {margin-left: 0;opacity: 1;}
+    to {margin-left: -100%;opacity: 1;}
+}
+@keyframes moveLeftNext {
+    from {margin-left: 100%;opacity: 1;}
+    to {margin-left: 0%;opacity: 1;}
+}
+
+
+.galleryContainer .moveRightCurrentSlide{
+    animation-name: moveRightCurrent;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+.galleryContainer .moveRightPrevSlide{
+    animation-name: moveRightPrev;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+@keyframes moveRightCurrent {
+    from {margin-left: 0;opacity: 1;}
+    to {margin-left: 100%;opacity: 1;}
+}
+@keyframes moveRightPrev {
+    from {margin-left: -100%;opacity: 1;}
+    to {margin-left: 0%;opacity: 1;}
+}
+.slideTextFromBottom {
+    animation-name: slideTextFromBottom;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+}
+@keyframes slideTextFromBottom {
+    from {opacity: 0;margin-top: 100px}
+    to {opacity: 1;margin-top: 0px;}
+}
+.slideTextFromTop {
+    animation-name: slideTextFromTop;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+}
+@keyframes slideTextFromTop {
+    from {opacity: 0;margin-top: -100px}
+    to {opacity: 1;margin-top: 0px;}
+}
+
+
+.side-bar-left-home {
+  background-color: #000000;
+  width: 125px;
+  height: 1500px;
+  top: 100px;
+  left: 0px;
+  position: absolute;
+}
+
+.side-bar-right-home {
+  background-color: #000000;
+  width: 100px;
+  height: 1500px;
+  top: 100px;
+  right: 0px;
+  position: absolute;
+  float: right;
+}
+
+.footer-bar-home {
+  background-color: #000000;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  top: 1500px;
+  left: 0px;
+}
+
+
+.footer-bar-home ul {
+  margin: 10px;
+  padding-right:150px;
+  text-align: right;
+  display:inline-block;
+  vertical-align:top;
+  float:right;
+}
+
+.footer-bar-home li {
+  list-style-type: none;
+  padding: 0px;
+  height: 24px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: inline-block;
+  float:right;
+}
+
+.footer-bar-home li a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  line-height: 70px;
+  padding: 5px 30px;
+}
+
+.footer-bar-home li a:hover {
+  -webkit-filter: invert(100%) !important;
+}
+
+
+.social-media-home {
+	background-color: #000000;
+	width: 75px;
+	height: 75px;
+}
+
+.car-range-container{
+	width: 80%;
+	height: 80%;
+	position: absolute;
+	right: 175px;
+	transform: translateY(20%);
+	background-color: #FFFFFF;
+	display:inline;
+	
+}
+
+
+.text-container {
+  position: relative;
+  width: 17.5vw;
+  float: left;
+  margin: 22px;
+  margin-top: 2vw;
+}
+
+.range-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.range-overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #A1A1A1;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.text-container:hover .range-overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.range-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.car-customiser-container{
+	width: 80%;
+	height: 80%;
+	position: absolute;
+	right: 175px;
+	transform: translateY(20%);
+	background-color: #FFFFFF;
+	display:inline;
+}
+
+.car-customiser-color-range{
+	width: 30%;
+	height: 95%;
+	position: absolute;
+	left: 3%;
+	top: 2%;
+	background-color: #FFFFFF;
+	display:inline-block;
+}
+
+.car-customiser-container ul {
+  text-align: right;
+  width: 100%;
+  padding: 5%;
+  display:inline-block;
+  vertical-align:top;
+  float:left; 
+}
+
+.car-customiser-container li {
+  list-style-type: none;
+  margin-right: 20%;
+  margin-bottom: 10%;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  float:left;
+  background-color: white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-size: 44px;
+  font-family: Merc-Standard;
+}
+
+.customiser-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.car-customiser-display-container {
+	margin-left: 35%;
+	margin-top: 5%;
+	width: 60%;
+	height: 80%;
+}
+
+#customiser-car-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.color-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
